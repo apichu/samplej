@@ -10,6 +10,7 @@ echo 'installing this dependency, it would typically be done so using this'
 echo 'flag. For a comprehensive explanation about "devDependencies", see'
 echo 'https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies.'
 set -x
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 npm install --save-dev cross-env
 set +x
 
