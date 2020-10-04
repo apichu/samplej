@@ -21,7 +21,7 @@ pipeline {
             }
         }
        
-    }
+    
 
       stage('Deliver') {
             steps {
@@ -30,4 +30,5 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
         }
+    }
 }
