@@ -11,6 +11,15 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                nodejs(nodeJSInstallationName: 'Node 6.x', configId: '<config-file-provider-id>') {
+                    sh 'npm config ls'
+                }
+            }
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
                 sh 'npm install'
             }
         }
@@ -19,5 +28,6 @@ pipeline {
                 sh './jenkins/scripts/test.sh' 
             }
         }
+       
     }
 }
