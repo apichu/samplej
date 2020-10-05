@@ -30,5 +30,12 @@ pipeline {
                 sh './jenkins/scripts/kill.sh'
             }
         }
+
+        /* Cleanup workspace */
+        post {
+        always {
+           deleteDir()
+          }
+        }
     }
 }
